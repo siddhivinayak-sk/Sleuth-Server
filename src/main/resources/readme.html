@@ -1,0 +1,12 @@
+Sleuth is a way to add a greater enhancement in logging by adding request id
+into loggs for better tracability of loggs.
+
+Only need to add dependency into pom and it starts adding below into the the
+logs:
+Application-name = Name of the application
+Traceid = each request and response traceid is same when calling same service or one service to another service.
+Spanid = Span Id is printed along with Trace Id. Span Id is different every request and response calling one service to another service.
+Zipkin-export = By default it is false. If it is true, logs will be exported to the Zipkin server.
+
+If want to export logs to ZipKin(Dapper), need to define ZipKin server url in 
+appliaction.properties file 
